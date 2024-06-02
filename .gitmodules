@@ -1,0 +1,4 @@
+[submodule "murtazahaque/public"]
+	path = murtazahaque/public
+	url = https://github.com/TheDarkLynx786/TheDarkLynx786.github.io.git
+	branch = main
