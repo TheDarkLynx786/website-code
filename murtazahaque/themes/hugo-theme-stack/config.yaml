@@ -8,10 +8,10 @@ params:
         - post
     featuredImageField: image
     rssFullContent: true
-    favicon:
+    favicon: 
 
     footer:
-        since:
+        since: 
         customText:
 
     dateFormat:
@@ -21,11 +21,11 @@ params:
     sidebar:
         compact: false
         emoji:
-        subtitle:
+        subtitle: 
         avatar:
             enabled: true
             local: true
-            src: img/avatar.png
+            src: 
 
     article:
         headingAnchor: false
