@@ -72,7 +72,7 @@ params:
         readingTime: true
         license:
             enabled: true
-            default: Licensed under CC BY-NC-SA 4.0
+            default: 
 
     comments:
         enabled: false
@@ -211,13 +211,13 @@ menu:
           name: GitHub
           url: 
           params:
-              icon: 
+              icon: brand-github
 
         - identifier: instagram
           name: Instagram
           url: 
           params:
-              icon: 
+              icon: brand-instagram
 
 related:
     includeNewer: true
