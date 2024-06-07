@@ -4,7 +4,6 @@ description: Hello, Welcome To My Website!
 aliases:
   - about-us
   - contact
-license: 
 lastmod: '2024-06-06'
 menu:
     main: 
