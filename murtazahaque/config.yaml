@@ -71,7 +71,7 @@ params:
         toc: true
         readingTime: true
         license:
-            enabled: true
+            enabled: false
             default: 
 
     comments:
@@ -209,13 +209,13 @@ menu:
     social:
         - identifier: github
           name: GitHub
-          url: 
+          url: https://github.com/TheDarkLynx786
           params:
               icon: brand-github
 
         - identifier: instagram
           name: Instagram
-          url: 
+          url: https://www.instagram.com/murtazahaque
           params:
               icon: brand-instagram
 

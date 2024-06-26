@@ -1,9 +1,14 @@
 <div class="article-list--compact links">
     {{ range $i, $link := .Params.links }}
         <article>
-            <a href="{{ $link.website }}" target="_blank" rel="noopener">
+            <a {{ if not (eq $link.type "header") }} href="{{ $link.website }}" {{ end }} target="_blank" rel="noopener">
+                {{ with $link.image }}
+                    <div class="article-image">
+                        <img src="{{ . }}" loading="lazy">
+                    </div>
+                {{ end }}
                 <div class="article-details">
-                    <h2 class="article-title">
+                    <h2 class="article-title {{ if eq $link.type "header" }}linkHeader{{ end }} ">
                         {{- $link.title -}}
                     </h2>
                     <footer class="article-time">
@@ -14,14 +19,10 @@
                         {{ end }}
                     </footer>
                 </div>
-        
-                {{ with $link.image }}
-                    {{ $permalink := . }}
-                    {{ with ($.Resources.GetMatch (printf "%s" (. | safeURL))) }}
-                        {{ $permalink = .RelPermalink }}
-                    {{ end }}
+                
+                {{ with $link.secondImage }}
                     <div class="article-image">
-                        <img src="{{ $permalink }}" loading="lazy">
+                        <img src="{{ . }}" loading="lazy">
                     </div>
                 {{ end }}
             </a>
