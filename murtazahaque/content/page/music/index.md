@@ -3,9 +3,10 @@ title: "Music"
 lastmod: '2024-07-06'
 slug: "music"
 tracks:
--   title: Track 1
-    description: Can't find a placeholder image yet, but this card will hold a music track.
-    image: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
+-   title: Chill Jam
+    description: This is one of my music compositions!
+    musictrack: ChillJam.mp3
+    image: Chill.jpeg
 menu:
     main:
         weight: -70
