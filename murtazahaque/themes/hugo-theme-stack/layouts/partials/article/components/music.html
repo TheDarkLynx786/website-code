@@ -1,0 +1,31 @@
+<div class="article-list--compact music">
+    {{ range $i, $track := .Params.tracks }}
+        <article>
+            <a {{ if not (eq $track.type "header") }} href="{{ $track.website }}" {{ end }} target="_blank" rel="noopener">
+                {{ with $track.image }}
+                    <div class="article-image">
+                        <img src="{{ . }}" loading="lazy">
+                    </div>
+                {{ end }}
+                <div class="article-details">
+                    <h2 class="article-title {{ if eq $track.type "header" }}linkHeader{{ end }} ">
+                        {{- $track.title -}}
+                    </h2>
+                    <footer class="article-time">
+                        {{ with $track.description }}
+                            {{ . }}
+                        {{ else }}
+                            {{ $track.website }}
+                        {{ end }}
+                    </footer>
+                </div>
+                
+                {{ with $track.secondImage }}
+                    <div class="article-image">
+                        <img src="{{ . }}" loading="lazy">
+                    </div>
+                {{ end }}
+            </a>
+        </article>
+    {{ end }}
+</div>
