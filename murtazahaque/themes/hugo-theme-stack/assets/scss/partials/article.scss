@@ -209,6 +209,68 @@
     }
 }
 
+/* List of different profiles */
+.article-list--profile {
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--shadow-l1);
+    background-color: var(--card-background);
+    --image-size: 50px;
+
+    @include respond(md) {
+        --image-size: 240px;
+    }
+
+    article {
+        & > a {
+            display: flex;
+            align-items: center;
+            padding: var(--small-card-padding);
+            gap: 15px;
+        }
+
+        &:not(:last-of-type) {
+            border-bottom: 1.5px solid var(--card-separator-color);
+        }
+
+        .article-details {
+            flex-grow: 1;
+            padding: 0;
+            justify-content: flex-start;
+            min-height: var(--image-size);
+            gap: 10px;
+        }
+
+        .article-title {
+            margin: 0;
+            font-size: 1.6rem;
+
+            @include respond(md) {
+                font-size: 1.8rem;
+            }
+        }
+
+        .article-image {
+            img {
+                width: var(--image-size);
+                height: var(--image-size);
+                object-fit: cover;
+                border-radius: 10px;
+            }
+        }
+
+        .article-time {
+            font-size: 1.4rem;
+        }
+
+        .article-preview {
+            font-size: 1.4rem;
+            color: var(--card-text-color-tertiary);
+            margin-top: 10px;
+            line-height: 1.5;
+        }
+    }
+}
+
 /* Tile style article list */
 .article-list--tile {
     article {

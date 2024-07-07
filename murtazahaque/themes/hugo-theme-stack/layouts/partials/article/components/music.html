@@ -1,4 +1,4 @@
-<div class="article-list--compact music">
+<div class="article-list--profile music">
     {{ range $i, $track := .Params.tracks }}
         <article>
             <a {{ if not (eq $track.type "header") }} href="{{ $track.website }}" {{ end }} target="_blank" rel="noopener">
