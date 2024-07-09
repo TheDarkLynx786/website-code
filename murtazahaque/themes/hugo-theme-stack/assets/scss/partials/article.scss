@@ -228,6 +228,10 @@
             gap: 15px;
         }
 
+        audio::-webkit-media-controls-panel {
+            background-color: crimson;
+        }
+
         &:not(:last-of-type) {
             border-bottom: 1.5px solid var(--card-separator-color);
         }
