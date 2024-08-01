@@ -1,5 +1,21 @@
+
+<section>    
+    {{- $taxonomy := $.Site.GetPage "musicsuite" -}}
+    {{- $terms := $taxonomy.Pages -}}
+    {{ if $terms }}
+    <h2 class="section-title">BeepBox/JummBox Compositions</h2>
+    <div class="subsection-list">
+        <div class="article-list--tile--music">
+            {{ range $terms }}
+                {{ partial "article-list/musictile" (dict "context" . "size" "250x150" "Type" "taxonomy") }}
+            {{ end }}
+        </div>
+    </div>
+    {{ end }}
+</section>
+
 <div class="article-list--profile music">
-    
+
     {{ range $i, $track := .Params.tracks }}
         
         <article>

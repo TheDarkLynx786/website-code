@@ -6,6 +6,7 @@ module:
 params:
     mainSections:
         - post
+        - musicsuite
     featuredImageField: image
     rssFullContent: true
     favicon: 
