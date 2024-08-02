@@ -1,18 +1,10 @@
-
-<section>    
-    {{- $taxonomy := $.Site.GetPage "music" -}}
-    {{- $terms := $taxonomy.Pages -}}
-    {{ if $terms }}
-    <h2 class="section-title">BeepBox/JummBox Compositions</h2>
-    <div class="subsection-list">
-        <div class="article-list--tile--music">
-            {{ range $terms }}
-                {{ partial "article-list/musictile" (dict "context" . "size" "1000x600" "Type" "taxonomy") }}
-            {{ end }}
-        </div>
-    </div>
-    {{ end }}
+<section class="article-content">
+    <!-- Refer to https://discourse.gohugo.io/t/responsive-tables-in-markdown/10639/5 -->
+    {{ $wrappedTable := printf "<div class=\"table-wrapper\">${1}</div>" }}
+    {{ .Content | replaceRE "(<table>(?:.|\n)+?</table>)" $wrappedTable | safeHTML }}
 </section>
+
+
 
 <div class="article-list--profile music">
 

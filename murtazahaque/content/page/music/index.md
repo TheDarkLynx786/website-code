@@ -2,20 +2,13 @@
 title: "Music"
 lastmod: '2024-07-06'
 slug: "music"
-tracks:
--   title: Chill Jam
-    description: This is one of my music compositions!
-    musictrack: ChillJam.mp3
-    image: Chill.jpeg
--   title: Ozymandias
-    description: This is one of my music compositions!
-    musictrack: Ozymandias.mp3
-    image: OzymandiasMitryAnderson.jpg
 menu:
     main:
         weight: -70
         params: 
             icon: music
+musicPage: true
+dawlinks: true
 ---
 
 Welcome to the music section of my website! I have been involved with music since the start of 2018 and I'm still running strong! I primarily play percussive instruments, though I have some knowledge of guitar and a little in piano. Here you can find covers that I've made or pieces that I have performed (THIS PART IS UNDER CONSTRUCTION).

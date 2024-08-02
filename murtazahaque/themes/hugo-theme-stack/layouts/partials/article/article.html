@@ -1,7 +1,7 @@
 <article class="{{ if .Params.image }}has-image {{ end }}main-article">
     {{ partial "article/components/header" . }}
 
-    {{ partial "article/components/content" . }}
+    {{if .Params.tracks }} {{ partial "article/components/musiccontent" . }} {{ else }} {{ partial "article/components/content" . }} {{ end }}
 
     {{ partial "article/components/footer" . }}
 
