@@ -1,7 +1,7 @@
 ---
 author: Murtaza Haque
 title: Chill Jam
-description: This is one of my compositions!
+description: Relaxed lounge theme.
 date: 2023-12-31
 draft: false
 image: Chill.jpeg
