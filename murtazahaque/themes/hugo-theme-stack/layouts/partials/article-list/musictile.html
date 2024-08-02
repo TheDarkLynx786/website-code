@@ -31,10 +31,7 @@
         {{ end }}
 
         <div class="article-details">
-            <time class="article-time">
-                {{- .context.Date.Format (or .Site.Params.dateFormat.published "Jan 02, 2006") -}}
-            </time>
-            
+            <time class="article-time">{{- .context.Date.Format (or .Site.Params.dateFormat.published "Jan 02, 2006") -}}</time>
             <h1 class="article-title">
                 {{- .context.Title -}}
             </h1>

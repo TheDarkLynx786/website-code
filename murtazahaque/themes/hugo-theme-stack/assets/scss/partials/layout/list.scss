@@ -82,17 +82,32 @@
             .article-title {
                 margin: 0;
                 font-size: 24px;
+                
+                background-color: #4242425e;
+                max-width: fit-content;
+                padding: 5px;
+                border-radius: 10px;
             }
 
             .article-time {
                 color: white;
+                font-size: 15px;
+
+                background-color: #424242b8;
+                padding: 5px;
+                border-radius: 10px;
+                
                 position: absolute;
                 top: 20px;
-                font-size: 15px;
             }
 
             .article-subheading {
-                margin: 0px
+                margin: 0px;
+
+                max-width: fit-content;
+                background-color: #4242425e;
+                padding: 5px;
+                border-radius: 10px;
             }
 
             .article-details {
