@@ -1,6 +1,5 @@
-
 <section>    
-    {{- $taxonomy := $.Site.GetPage "music" -}}
+    {{- $taxonomy := $.Site.GetPage "bpbx-jmbx-tracks" -}}
     {{- $terms := $taxonomy.Pages -}}
     {{ if $terms }}
     <h2 class="section-title">BeepBox/JummBox Compositions</h2>
@@ -14,39 +13,3 @@
     {{ end }}
 </section>
 
-<div class="article-list--profile music">
-
-    {{ range $i, $track := .Params.tracks }}
-        
-        <article>
-            
-            <a target="_blank" rel="noopener">
-                {{ with $track.image }}
-                    <div class="article-image">
-                        <img src="{{ . }}" loading="lazy">
-                    </div>
-                {{ end }}
-                <div class="article-details">
-                    <h2 class="article-title">
-                        {{- $track.title -}}
-                    </h2>
-                    <audio controls> 
-                        <source src="{{ $track.musictrack }}" type="audio/mpeg">
-                    </audio>
-                    <footer class="article-time">
-                        {{ with $track.description }}
-                            {{ . }}
-                        {{ else }}
-                            {{ $track.website }}
-                        {{ end }}
-                    </footer>
-                    
-                    
-                </div>
-            </a>
-
-        </article>
-
-    {{ end }}
-
-</div>
