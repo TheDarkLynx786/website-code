@@ -7,3 +7,7 @@ draft: false
 categories: 
     - website
 ---
+
+Funny, I actually never put any content on this post.
+
+First post of many! Stay tuned for more!

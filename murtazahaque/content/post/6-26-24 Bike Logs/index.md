@@ -40,7 +40,7 @@ The way back was also pretty straightfoward. I did have some problems with the g
 
 ![A picture I took from inside the neighborhood.](NeighborhoodLakeview.jpg)
 
-![A view of the overflowing lake. That tree is knee-deep.](OverflowingLake.jpg)
+![A view of the overflowing lake. That tree is knee-deep. Could trees have knees?](OverflowingLake.jpg)
 
 ![Photo of the beach without the beach, and the volleyball courts. Volleyball in the water *does* sound fun!](SubmergedBeach.jpg)
 
