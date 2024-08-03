@@ -14,24 +14,35 @@
     flex-direction: column;
     padding: 30px;
     width: 90%;
-    max-width: auto;
+    height: auto;
+    margin: auto;
     border-radius: 10px;
 }
 .form-title {
     text-align: center;
-    color: white;
+    color: var(--card-text-color-main);
 }
 input {
     height: 50px;
     border-radius: 10px;
-    margin: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+.form-subtitle {
+    color: var(--card-text-color-main);
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 textarea {
-    resize: none;
-    height: 300px;
+    resize: vertical;
+    height: 400px;
     border-radius: 10px;
-    margin: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 100%;
 }
 button {
     border-radius: 10px;

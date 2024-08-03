@@ -1,4 +1,4 @@
-<article class="{{ if .Params.image }}has-image {{ end }}main-article">
+<article class="{{ if .Params.image }}has-image {{ end }} {{ if .Params.contact }} main-article--contact {{ else }} main-article {{ end }}">
     {{ if not .Params.contact }} {{ partial "article/components/header" . }} {{ end }}
 
     {{if .Params.tracks }} {{ partial "article/components/musiccontent" . }} {{ else if .Params.contact }} {{ partial "article/components/contact" . }} {{ else }} {{ partial "article/components/content" . }} {{ end }}
