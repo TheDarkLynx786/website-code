@@ -5,12 +5,25 @@
 </section>
 
 <div class="contact-body"> 
-    <form class="form">
+    <form class="form" onsubmit="sendEmail(); reset; return false;">
         <h1 class="form-title"> Contact Me! </h1>
         <input type="text" id="name" placeholder="Name" required>
         <input type="text" id="email" placeholder="Email" required>
+        <!--Insert Fun Questions Here-->
         <textarea resize="none" id="message" rows="4" placeholder="Have something to say? Shoot!"></textarea>
         <button type="submit">Send</button>
     </form>
+    <script src="https://www.smtpjs.com/v3/smtpjs"></script>
+    <script>
+        function sendEmail() {
+            Email.send({
+            SecureToken: "52520f2c-ac9f-492b-af3e-0e3b48f0886a",
+            To : 'murtaza0713@gmail.com',
+            From : document.getElementById("email").value,
+            Subject : "Incoming Website Contact",
+            Body : "Somebody visiting your site wishes to speak to you!" + "\n\nName: " + document.getElementById("name").value + "\n\n" + "Here is what they have to say:\n" + document.getElementById("message").value,
+            }).then(message => alert("Message Sent! Hopefully this will get me to check my inbox more..."));
+        }
+    </script>
 
 </div>
