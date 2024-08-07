@@ -53,3 +53,54 @@ button {
     width: 150px;
     margin: 20px auto 0;
 }
+
+.loader {
+    border-radius: 10px;
+    border-style: solid;
+    border-color: black;
+    border-width: 0.5px;
+    height: 30px;
+    text-align: center;
+    background-color: #07442a;
+    width: 100%;
+    margin: 20px auto 0;
+    padding: 7px;
+    display:none;
+}
+
+.loader.show {
+    display: block;
+}
+
+.loader i {
+    color: #FFF;
+    animation: rotate .4s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(270deg); //Goofy
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.sendoff-msg {
+    width: 100%;
+    background-color: #002421;
+    text-align: center;
+    margin: 20px auto 0;
+}
+
+.sendoff-msg.show {
+    display:block;
+}
+
+.msg-sent, .msg-not-sent {
+    color:white;
+    line-height: 3;
+}

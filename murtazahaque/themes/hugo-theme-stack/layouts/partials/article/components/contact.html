@@ -4,29 +4,48 @@
     {{ .Content | replaceRE "(<table>(?:.|\n)+?</table>)" $wrappedTable | safeHTML }}
 </section>
 
-<div class="contact-body"> 
-    <form class="form">
+<div class="contact-body">
+    
+    <link rel="stylesheet" href="https://cdn.lineicons.com/4.0/lineicons.css" />
+    <form action="#" id="form" class="form">
         <h1 class="form-title"> Don't Contact Me (Yet)! Still Under Construction!</h1>
+        
+
+
+
         <div> 
             <p class="form-subtitle">Name:</p> 
-            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="text" name="name" placeholder="Your Name" required>
         </div>
+        
         <div>
             <p class="form-subtitle">Email:</p> 
-            <input type="text" id="email" placeholder="Your Email" required>
+            <input type="text" name="email" placeholder="Your Email" required>
         </div>
+        
         <!--Fun Questions-->
         <div>
             <p class="form-subtitle">Have any favorite music? Drop the name and artist and I'll give it a listen:</p> 
-            <input type="text" id="music" placeholder="(Optional) Your Favorite Music">
+            <input type="text" name="music" placeholder="(Optional) Your Favorite Music">
         </div>
         
 
         <div>
             <p class="form-subtitle">Your Message:</p>
-            <textarea resize="none" id="message" rows="4" placeholder="Have something to say? Shoot!"></textarea>
+            <textarea resize="none" name="message" rows="4" placeholder="Have something to say? Shoot!"></textarea>
         </div>
-        <button type="submit">Send</button>
+
+        <!--Button-->
+        <button type='submit'>Send</button>
+
+        <!--Loader + Confirmation Message-->
+        <div class="loader">
+            <i class="lni lni-spinner-solid"></i>
+        </div>
+        <div class="sendoff-msg"></div>
     </form>
 
+    <!--Scripts-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="js\contact.js"></script>
 </div>
