@@ -8,7 +8,7 @@
     
     <link rel="stylesheet" href="https://cdn.lineicons.com/4.0/lineicons.css" />
     <form action="#" id="form" class="form">
-        <h1 class="form-title"> Don't Contact Me (Yet)! Still Under Construction!</h1>
+        <h1 class="form-title">Contact Me!</h1>
         
 
 
@@ -24,6 +24,17 @@
         </div>
         
         <!--Fun Questions-->
+        
+        
+        
+        <div>
+            <p class="form-subtitle"></p>
+            <script>
+
+            </script>
+            <input type="text" name="music" placeholder="(Optional) Your Favorite Music">
+        </div>
+        
         <div>
             <p class="form-subtitle">Have any favorite music? Drop the name and artist and I'll give it a listen:</p> 
             <input type="text" name="music" placeholder="(Optional) Your Favorite Music">
@@ -47,5 +58,40 @@
 
     <!--Scripts-->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script src="js\contact.js"></script>
+    <script>
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init({publicKey: "GSwdno2FHiciyvCb4",});
+        })();
+
+
+        const msg = document.querySelector(".sendoff-msg");
+
+        window.onload = function() {
+            document.getElementById("form").addEventListener('submit', function(event) {
+        
+                event.preventDefault();
+        
+                document.querySelector(".loader").classList.add("show");
+
+                // these IDs from the previous steps
+                emailjs.sendForm("service_my_website", "template_website_email", this).then(
+                    () => {
+                        document.getElementById("form").reset();
+                        document.querySelector(".loader").classList.remove("show");
+                        msg.innerHTML = "";
+                        msg.innerHTML += "<span class='msg-sent'>Email Sent! Thanks for contacting!</span>";
+                        msg.classList.add("show");
+                        setTimeout( () => msg.classList.remove("show"), 20);
+                    }, 
+                    (error) => {
+                        document.querySelector(".loader").classList.toggle("show");
+                        msg.innerHTML = "";
+                        msg.innerHTML += "<span class='msg-not-sent'>Uh Oh! Email Not Sent, Please Try Again.</span>";
+                        msg.classList.add("show");
+                    }
+                );
+            });
+        }
+    </script>
 </div>
