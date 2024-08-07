@@ -9,30 +9,34 @@
     <link rel="stylesheet" href="https://cdn.lineicons.com/4.0/lineicons.css" />
     <form action="#" id="form" class="form">
         <h1 class="form-title">Contact Me!</h1>
-        
+        <p class="form-description">Need to talk? Enter in your stuff below, and I'll get back to you in some time!</p>
 
 
 
         <div> 
             <p class="form-subtitle">Name:</p> 
-            <input type="text" name="name" placeholder="Your Name">
+            <input type="text" name="name" placeholder="Your Name" required>
         </div>
         
         <div>
             <p class="form-subtitle">Email:</p> 
-            <input type="text" name="email" placeholder="Your Email">
+            <input type="text" name="email" placeholder="Your Email" required>
         </div>
         
-        <!--Fun Questions-->
-        
-        
-        
+        <!--Fun Questions--> 
         <div>
-            <p class="form-subtitle"></p>
+            <p class="form-subtitle" id="number-label"></p>
             <script>
+                label = document.getElementById("number-label");
+                num1 = Math.floor(Math.random() * 1000),num2 = Math.floor(Math.random()*1000);
+                label.innerHTML = "Bot Check: What's " + num1 + " + " + num2 + "?";
 
+                function gradeMath() {
+                    value = document.getElementByName("numbers").value;
+                    if (value != num1+num2) {alert("Come on now, it's just addition. :)");}
+                }
             </script>
-            <input type="text" name="music" placeholder="(Optional) Your Favorite Music">
+            <input type="text" name="numbers" placeholder="Math time!">
         </div>
         
         <div>
@@ -40,14 +44,14 @@
             <input type="text" name="music" placeholder="(Optional) Your Favorite Music">
         </div>
         
-
+        <!--Text Area-->
         <div>
             <p class="form-subtitle">Your Message:</p>
-            <textarea resize="none" name="message" rows="4" placeholder="Have something to say? Shoot!"></textarea>
+            <textarea resize="none" name="message" rows="4" placeholder="Have something to say? Shoot!" required></textarea>
         </div>
 
         <!--Button-->
-        <button type='submit'>Send</button>
+        <button type='submit' onclick="gradeMath()">Send</button>
 
         <!--Loader + Confirmation Message-->
         <div class="loader">
@@ -56,8 +60,9 @@
         <div class="sendoff-msg"></div>
     </form>
 
-    <!--Scripts-->
+    <!--EmailJS CDN-->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <!--Contact Script-->
     <script>
         (function() {
             // https://dashboard.emailjs.com/admin/account
@@ -82,7 +87,7 @@
                         msg.innerHTML = "";
                         msg.innerHTML += "<span class='msg-sent'>Email Sent! Thanks for contacting!</span>";
                         msg.classList.add("show");
-                        setTimeout( () => msg.classList.remove("show"), 20);
+                        setTimeout( () => msg.classList.remove("show"), 2000);
                     }, 
                     (error) => {
                         document.querySelector(".loader").classList.toggle("show");
@@ -94,4 +99,5 @@
             });
         }
     </script>
+
 </div>

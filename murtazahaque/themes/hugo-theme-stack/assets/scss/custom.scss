@@ -20,6 +20,7 @@
 }
 .form-title {
     text-align: center;
+    padding: 10px;
     color: var(--card-text-color-main);
 }
 input {
@@ -32,6 +33,14 @@ input {
 
 .form-subtitle {
     color: var(--card-text-color-main);
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.form-description {
+    color: var(--card-text-color-main);
+    text-align: center;
+    font-size: larger;
     margin-top: 5px;
     margin-bottom: 5px;
 }
