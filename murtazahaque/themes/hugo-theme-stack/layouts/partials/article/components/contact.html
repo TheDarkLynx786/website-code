@@ -32,8 +32,13 @@
                 label.innerHTML = "Bot Check: What's " + num1 + " + " + num2 + "?";
 
                 function gradeMath() {
+                    alert("Testing Testing");
                     value = document.getElementByName("numbers").value;
-                    if (value != num1+num2) {alert("Come on now, it's just addition. :)");}
+                    return false;
+                    if (value != (1000)) {
+                        alert("Come on now, it's just addition. :)");
+                        return false;
+                    }
                 }
             </script>
             <input type="text" name="numbers" placeholder="Math time!">
