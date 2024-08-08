@@ -26,22 +26,12 @@
         <!--Fun Questions--> 
         <div>
             <p class="form-subtitle" id="number-label"></p>
-            <script>
+            <script type="text/javascript">
                 label = document.getElementById("number-label");
                 num1 = Math.floor(Math.random() * 1000),num2 = Math.floor(Math.random()*1000);
                 label.innerHTML = "Bot Check: What's " + num1 + " + " + num2 + "?";
-
-                function gradeMath() {
-                    alert("Testing Testing");
-                    value = document.getElementByName("numbers").value;
-                    return false;
-                    if (value != (1000)) {
-                        alert("Come on now, it's just addition. :)");
-                        return false;
-                    }
-                }
             </script>
-            <input type="text" name="numbers" placeholder="Math time!">
+            <input type="text" id="addition" placeholder="Math time!">
         </div>
         
         <div>
@@ -56,7 +46,7 @@
         </div>
 
         <!--Button-->
-        <button type='submit' onclick="gradeMath()">Send</button>
+        <button type='submit'>Send</button>
 
         <!--Loader + Confirmation Message-->
         <div class="loader">
@@ -68,7 +58,7 @@
     <!--EmailJS CDN-->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <!--Contact Script-->
-    <script>
+    <script type="text/javascript">
         (function() {
             // https://dashboard.emailjs.com/admin/account
             emailjs.init({publicKey: "GSwdno2FHiciyvCb4",});
@@ -77,9 +67,24 @@
 
         const msg = document.querySelector(".sendoff-msg");
 
-        window.onload = function() {
-            document.getElementById("form").addEventListener('submit', function(event) {
+        function gradeMath() {
+            value = document.getElementById("addition").value;
+            sum = num1 + num2;     
+            if (value != sum) {
+                alert("Come on now, it's just addition. :)");
+                return false;
+            }
+        }
         
+        
+        window.onload = function() {
+            
+            document.getElementById("form").addEventListener('submit', function(event) {
+                
+                chker = gradeMath();
+
+                if(chker == false) return false;
+
                 event.preventDefault();
         
                 document.querySelector(".loader").classList.add("show");
@@ -90,14 +95,14 @@
                         document.getElementById("form").reset();
                         document.querySelector(".loader").classList.remove("show");
                         msg.innerHTML = "";
-                        msg.innerHTML += "<span class='msg-sent'>Email Sent! Thanks for contacting!</span>";
+                        msg.innerHTML += "<span class='msg-sent'>Email sent! I will get back to you soon, thank you!</span>";
                         msg.classList.add("show");
                         setTimeout( () => msg.classList.remove("show"), 2000);
                     }, 
                     (error) => {
                         document.querySelector(".loader").classList.toggle("show");
                         msg.innerHTML = "";
-                        msg.innerHTML += "<span class='msg-not-sent'>Uh Oh! Email Not Sent, Please Try Again.</span>";
+                        msg.innerHTML += "<span class='msg-not-sent'>Uh Oh, message not sent! Check your connection and try again.</span>";
                         msg.classList.add("show");
                     }
                 );
