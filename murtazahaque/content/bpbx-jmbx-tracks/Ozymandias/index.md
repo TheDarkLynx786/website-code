@@ -11,3 +11,7 @@ tracks:
     musictrack: Ozymandias.mp3
     image: OzymandiasMitryAnderson.jpg
 ---
+
+I made this piece after playing around with some chords on a piano site (link on the main page). The progression was assisted by a really cool melody with a really cool preset, and soon it evolved into this track. I think the naming of this track was probably the best thing I've named, as the title seems to fit very well with how the track sounds. There is a cool music-box section and also a violin solo at the end, so check it out! 
+
+This is also the first track I made that was non-loopable and a full production.
