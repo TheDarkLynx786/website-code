@@ -11,7 +11,7 @@
     {{ range $i, $track := .Params.tracks }}
         
         <article>
-            
+
             <a target="_blank" rel="noopener">
                 {{ with $track.image }}
                     <div class="article-image">
@@ -26,9 +26,28 @@
                         <audio controls> 
                             <source src="{{ $track.musictrack }}" type="audio/mpeg">
                         </audio>
-                        <button type="button" download>
+                        <button type="button" data-download="Famine">
                             Download Latest JSON
                         </button>
+                        <script type="text/javascript">
+                            const dwnLd = document.querySelector("[data-download]");
+
+                            const btnID = dwnLd.dataset.download;
+
+                            const a = document.createElement("a");
+
+                            a.href = "murtazahaque\content\bpbx-jmbx-tracks\FourHorsemen\Famine.json";
+                            a.download = "";
+                            a.style.display = "none";
+
+                            button.addEventListener("click", () => {
+                                document.body.appendChild(a);
+                                a.click();
+                                document.body.removeChild(a);
+                            });
+                        </script>
+
+
                     </div>
                     <footer class="article-time">
                         {{ with $track.description }}

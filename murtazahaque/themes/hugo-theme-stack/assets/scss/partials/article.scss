@@ -232,6 +232,10 @@
             background-color: crimson;
         }
 
+        .downloader {
+            color: blue !important;
+        }
+
         button {
             position: absolute;
             margin: 7px;
@@ -274,7 +278,9 @@
 
         .article-time {
             font-size: 1.4rem;
-            height: 145px;
+            height: auto;
+            line-height: 2.125rem;
+            text-shadow: 1px 1px #516969;
         }
 
         .article-preview {
