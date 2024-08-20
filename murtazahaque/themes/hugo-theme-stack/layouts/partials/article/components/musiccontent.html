@@ -8,6 +8,30 @@
 
 <div class="article-list--profile music">
 
+    <script type="text/javascript">
+        //Domain Expansion, unlimited javascript
+        function download() { 
+            const buttons = document.querySelectorAll("[onclick]")
+            buttons.forEach(button => {
+                console.log("bird lettuce");
+                
+                const btnID = button.dataset.filename;
+
+                const a = document.createElement("a");
+
+                a.href = btnID;
+                a.download = "";
+                a.style.display = "none";
+
+                button.addEventListener("click", () => {
+                    document.body.appendChild(a);
+                    a.click();
+                    document.body.removeChild(a);
+                });
+            });
+        }
+    </script>
+
     {{ range $i, $track := .Params.tracks }}
         
         <article>
@@ -26,29 +50,11 @@
                         <audio controls> 
                             <source src="{{ $track.musictrack }}" type="audio/mpeg">
                         </audio>
-                        <button onclick="download()">
-                            Download Latest JSON
-                        </button>
-                        <script type="text/javascript">
-                            function download() { 
-                                const button = document.querySelector("[onclick]")
-
-                                console.log("bird lettuce");
-                                const a = document.createElement("a");
-
-                                a.href = "{{ $track.trackdwnld }}";
-                                a.download = "";
-                                a.style.display = "none";
-
-                                button.addEventListener("click", () => {
-                                    document.body.appendChild(a);
-                                    a.click();
-                                    document.body.removeChild(a);
-                                });
-                            }
-                        </script>
-
-
+                        {{ with $track.trackdwnld }}
+                            <button onclick="download()" data-filename="{{ $track.trackdwnld }}">
+                                Download Latest JSON
+                            </button>
+                        {{ end }}
                     </div>
                     <footer class="article-time">
                         {{ with $track.description }}
