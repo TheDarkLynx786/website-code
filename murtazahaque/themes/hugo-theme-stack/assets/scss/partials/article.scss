@@ -232,6 +232,16 @@
             background-color: crimson;
         }
 
+        button {
+            position: absolute;
+            margin: 7px;
+            height: 40px;
+            width: 75px;
+            letter-spacing: 1px;
+            font-size: 9px;
+            background-color: #516969;
+        }
+
         &:not(:last-of-type) {
             border-bottom: 1.5px solid var(--card-separator-color);
         }

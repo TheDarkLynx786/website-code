@@ -22,9 +22,14 @@
                     <h2 class="article-title">
                         {{- $track.title -}}
                     </h2>
-                    <audio controls> 
-                        <source src="{{ $track.musictrack }}" type="audio/mpeg">
-                    </audio>
+                    <div>
+                        <audio controls> 
+                            <source src="{{ $track.musictrack }}" type="audio/mpeg">
+                        </audio>
+                        <button type="button" download>
+                            Download Latest JSON
+                        </button>
+                    </div>
                     <footer class="article-time">
                         {{ with $track.description }}
                             {{ . }}
