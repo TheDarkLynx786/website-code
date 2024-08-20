@@ -26,25 +26,26 @@
                         <audio controls> 
                             <source src="{{ $track.musictrack }}" type="audio/mpeg">
                         </audio>
-                        <button type="button" data-download="Famine">
+                        <button onclick="download()">
                             Download Latest JSON
                         </button>
                         <script type="text/javascript">
-                            const dwnLd = document.querySelector("[data-download]");
+                            function download() { 
+                                const button = document.querySelector("[onclick]")
 
-                            const btnID = dwnLd.dataset.download;
+                                console.log("bird lettuce");
+                                const a = document.createElement("a");
 
-                            const a = document.createElement("a");
+                                a.href = "{{ $track.trackdwnld }}";
+                                a.download = "";
+                                a.style.display = "none";
 
-                            a.href = "murtazahaque\content\bpbx-jmbx-tracks\FourHorsemen\Famine.json";
-                            a.download = "";
-                            a.style.display = "none";
-
-                            button.addEventListener("click", () => {
-                                document.body.appendChild(a);
-                                a.click();
-                                document.body.removeChild(a);
-                            });
+                                button.addEventListener("click", () => {
+                                    document.body.appendChild(a);
+                                    a.click();
+                                    document.body.removeChild(a);
+                                });
+                            }
                         </script>
 
 
