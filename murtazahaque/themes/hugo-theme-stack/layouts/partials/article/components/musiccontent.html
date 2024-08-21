@@ -6,33 +6,13 @@
 
 
 
-<div class="article-list--profile music">
-
-    <script type="text/javascript">
-        //Domain Expansion, unlimited javascript
-        function download() { 
-            const buttons = document.querySelectorAll("[onclick]")
-            buttons.forEach(button => {
-                const btnID = button.dataset.filename;
-
-                const a = document.createElement("a");
-
-                a.href = btnID;
-                a.download = "";
-                a.style.display = "none";
-
-                document.body.appendChild(a);
-                a.click();
-                document.body.removeChild(a);
-            });
-        }
-    </script>
+<div class="article-list--profile">s
 
     {{ range $i, $track := .Params.tracks }}
         
         <article>
 
-            <a target="_blank" rel="noopener">
+            <div>
                 {{ with $track.image }}
                     <div class="article-image">
                         <img src="{{ . }}" loading="lazy">
@@ -47,9 +27,11 @@
                             <source src="{{ $track.musictrack }}" type="audio/mpeg">
                         </audio>
                         {{ with $track.trackdwnld }}
-                            <button onclick="download()" data-filename="{{ $track.trackdwnld }}">
-                                Download Latest JSON
-                            </button>
+                            <a class="dwnldWrapper" href="{{ $track.trackdwnld }}" download="{{ $track.trackdwnld }}"> 
+                                <button type="button">
+                                    Download Latest JSON
+                                </button>
+                            </a>
                         {{ end }}
                     </div>
                     <footer class="article-time">
@@ -62,7 +44,7 @@
                     
                     
                 </div>
-            </a>
+            </div>
 
         </article>
 
