@@ -9,6 +9,7 @@ tracks:
 -   title: Ozymandias
     description: Original painting is by Mitry Anderson. The style of the artwork feels like a perfect match to what my track expresses, hence why I chose this image for the job. 
     musictrack: Ozymandias.mp3
+    trackdwnld: Ozymandias.json
     image: OzymandiasMitryAnderson.jpg
 ---
 

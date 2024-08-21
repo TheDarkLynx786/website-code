@@ -9,6 +9,7 @@ tracks:
 -   title: War
     description: "This track kind of picks off what I put down for Bloodlust, another track I've made that you can check out on this site. I wanted to go full-blown metal for this, but the distortion probably got the best of the track. It took over 7 iterations to get it to a point where it sounded alright, but considering how the newer tracks like Famine turned out, I might revisit it once more to boost the volume and rid the distortion. I happened to have also used a small Cm phyrgian riff from the start of \"Pyschosocial\" by Slipknot. This is also where I began to play around with panning effects, and the outcome was great!" 
     musictrack: War.mp3
+    trackdwnld: War.json
     image: War.jpg
 -   title: Pestilence
     description: "This track is slower and more movement based. It starts of slow, representing the spread and behavior of disease. Then it slowly slides into a metal structure and a solid groove towards the middle. Not one of the most exciting tracks per say, but I still think it turned out quite nice. I happened to use some progressive or \"djent\" sounding parts of the track from a song callled \"Through Purgatory\" by a very niche band called \"City of Dis.\" I also must add, the ending certainly turned out very nice, and I might do something like that again!"
