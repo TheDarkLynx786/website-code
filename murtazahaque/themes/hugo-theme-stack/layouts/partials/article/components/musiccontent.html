@@ -13,8 +13,6 @@
         function download() { 
             const buttons = document.querySelectorAll("[onclick]")
             buttons.forEach(button => {
-                console.log("bird lettuce");
-                
                 const btnID = button.dataset.filename;
 
                 const a = document.createElement("a");
@@ -23,11 +21,9 @@
                 a.download = "";
                 a.style.display = "none";
 
-                button.addEventListener("click", () => {
-                    document.body.appendChild(a);
-                    a.click();
-                    document.body.removeChild(a);
-                });
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
             });
         }
     </script>

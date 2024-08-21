@@ -13,6 +13,7 @@ tracks:
 -   title: Pestilence
     description: "This track is slower and more movement based. It starts of slow, representing the spread and behavior of disease. Then it slowly slides into a metal structure and a solid groove towards the middle. Not one of the most exciting tracks per say, but I still think it turned out quite nice. I happened to use some progressive or \"djent\" sounding parts of the track from a song callled \"Through Purgatory\" by a very niche band called \"City of Dis.\" I also must add, the ending certainly turned out very nice, and I might do something like that again!"
     musictrack: Pestilence.mp3
+    trackdwnld: Pestilence.json
     image: Pestilence.jpg
 -   title: Famine
     description: "This probably might be my favorite track in this series. This was where I utilized the pan effects and layering of different instruments to create a louder, richer guitar sound without any of the distortion that comes with the lower octaves. Then, I simply took advantage of the pan effects to create really cool effects and fun musical melodies within the track, especially the section where the \"peak\" of the piece is achieved (measure 29 to be exact). The breakdown also has a fun little section before entering into shred. Overall, the piece is just a whole lot of fun and I really enjoyed trying to perfect this style. I got one of the sections from a track by MASTER BOOT RECORD called \"DBLSPACE.EXE.\" I just shifted that section in a different key signature and made it match the tempo of the track, which is a bit faster."
