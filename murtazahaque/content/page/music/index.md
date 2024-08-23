@@ -2,6 +2,7 @@
 title: "Music"
 lastmod: '2024-07-06'
 slug: "music"
+image: Music Page Banner.png
 menu:
     main:
         weight: -70
