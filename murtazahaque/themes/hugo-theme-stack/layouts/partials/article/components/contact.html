@@ -20,7 +20,7 @@
         
         <div>
             <p class="form-subtitle">Email:</p> 
-            <input type="text" name="email" placeholder="Your Email" required>
+            <input type="text" name="email" id="email" placeholder="Your Email" required>
         </div>
         
         <!--Fun Questions--> 
@@ -46,7 +46,7 @@
         </div>
 
         <div>
-            <p class="form-subtitle">Want to share memes, art, music, or code? Send me a file! (no viruses please): </p>
+            <!--<p class="form-subtitle">Want to share memes, art, music, or code? Send me a file! (no viruses please): </p>-->
             <input class="form-file-upload" type="file" name="file" id="file" multiple />
         </div>
 
@@ -73,12 +73,23 @@
         const msg = document.querySelector(".sendoff-msg");
 
         function gradeMath() {
-            value = document.getElementById("addition").value;
-            sum = num1 + num2;     
+            let value = document.getElementById("addition").value;
+            let sum = num1 + num2;     
             if (value != sum) {
                 alert("Come on now, it's just addition. :)");
                 return false;
             }
+            return true;
+        }
+
+        function checkValidEmail() {
+            let email = document.getElementById("email").value;
+            const chkPattern = /[^\~\!\ \$\%\^\&\*\_\=\+\}\{\'\?\.\,\-]+@[A-z]+\.[A-z]+/;
+            if (!chkPattern.test(email)) {
+                alert("Invalid Email Address");
+                return false;
+            }
+            return true;
         }
         
         
@@ -86,9 +97,11 @@
             
             document.getElementById("form").addEventListener('submit', function(event) {
                 
-                chker = gradeMath();
+                grdChker = gradeMath();
+                emlChker = checkValidEmail();
+                
 
-                if(chker == false) return false;
+                if(!grdChker || !emlChker ) return false;
 
                 event.preventDefault();
         
