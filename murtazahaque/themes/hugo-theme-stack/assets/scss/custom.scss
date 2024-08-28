@@ -23,6 +23,7 @@
     padding: 10px;
     color: var(--card-text-color-main);
 }
+
 input {
     height: 50px;
     padding: 10px;
@@ -36,6 +37,15 @@ input {
     color: var(--card-text-color-main);
     margin-top: 5px;
     margin-bottom: 5px;
+}
+
+.form-file-upload {
+    color: var(--card-text-color-main);
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-color: var(--scrollbar-thumb);
+    padding: 10px;
+    height: auto;
 }
 
 .form-description {
