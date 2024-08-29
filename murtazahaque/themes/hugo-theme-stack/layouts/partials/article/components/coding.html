@@ -4,7 +4,7 @@
     {{ if $terms }}
     <h2 class="section-title">Programming Projects</h2>
     <div class="subsection-list">
-        <div class="article-list--tile--music">
+        <div class="article-list--tile--progproj">
             {{ range $terms }}
                 {{ partial "article-list/musictile" (dict "context" . "size" "1000x600" "Type" "taxonomy") }}
             {{ end }}
@@ -14,7 +14,7 @@
 </section>
 
 <div class="article-list--compact links">
-    {{ range $i, $link := .Params.dawlinks }}
+    {{ range $i, $link := .Params.devlinks }}
         <article>
             <a {{ if not (eq $link.type "header") }} href="{{ $link.website }}" {{ end }} target="_blank" rel="noopener">
                 {{ with $link.image }}
