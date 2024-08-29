@@ -1,0 +1,46 @@
+<section>    
+    {{- $taxonomy := $.Site.GetPage "programming-projects" -}}
+    {{- $terms := $taxonomy.Pages -}}
+    {{ if $terms }}
+    <h2 class="section-title">Programming Projects</h2>
+    <div class="subsection-list">
+        <div class="article-list--tile--music">
+            {{ range $terms }}
+                {{ partial "article-list/musictile" (dict "context" . "size" "1000x600" "Type" "taxonomy") }}
+            {{ end }}
+        </div>
+    </div>
+    {{ end }}
+</section>
+
+<div class="article-list--compact links">
+    {{ range $i, $link := .Params.dawlinks }}
+        <article>
+            <a {{ if not (eq $link.type "header") }} href="{{ $link.website }}" {{ end }} target="_blank" rel="noopener">
+                {{ with $link.image }}
+                    <div class="article-image">
+                        <img src="{{ . }}" loading="lazy">
+                    </div>
+                {{ end }}
+                <div class="article-details">
+                    <h2 class="article-title {{ if eq $link.type "header" }}linkHeader{{ end }} ">
+                        {{- $link.title -}}
+                    </h2>
+                    <footer class="article-time">
+                        {{ with $link.description }}
+                            {{ . }}
+                        {{ else }}
+                            {{ $link.website }}
+                        {{ end }}
+                    </footer>
+                </div>
+                
+                {{ with $link.secondImage }}
+                    <div class="article-image">
+                        <img src="{{ . }}" loading="lazy">
+                    </div>
+                {{ end }}
+            </a>
+        </article>
+    {{ end }}
+</div>
