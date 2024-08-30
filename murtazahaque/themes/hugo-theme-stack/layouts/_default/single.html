@@ -30,10 +30,9 @@
         {{ partial "article/components/links" . }}
     {{ end }}
 
-    {{ if .Params.progProj }}
-        {{ partial "article/components/coding" . }}
+    {{ if .Params.projects }}
+        {{ partial "article/components/projects" . }}
     {{ end }}
-
 
     {{ if .Params.musicPage }}
         {{ partial "article/components/music" . }}

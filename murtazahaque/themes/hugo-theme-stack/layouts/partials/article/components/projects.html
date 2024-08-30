@@ -4,7 +4,7 @@
     {{ if $terms }}
     <h2 class="section-title">Programming Projects</h2>
     <div class="subsection-list">
-        <div class="article-list--tile--progproj">
+        <div class="article-list--tile--projects">
             {{ range $terms }}
                 {{ partial "article-list/musictile" (dict "context" . "size" "1000x600" "Type" "taxonomy") }}
             {{ end }}

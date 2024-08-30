@@ -46,8 +46,6 @@ permalinks:
 params:
     mainSections:
         - post
-    musicSections:
-        - musicsuite
     featuredImageField: image
     rssFullContent: true
     favicon:  ChooChoo.ico # e.g.: favicon placed in `static/favicon.ico` of your site folder, then set this field to `/favicon.ico` (`/` is necessary)

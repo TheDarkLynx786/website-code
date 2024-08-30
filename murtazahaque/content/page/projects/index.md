@@ -7,7 +7,7 @@ menu:
         weight: -70
         params: 
             icon: code
-progProj: true
+projects: true
 devlinks:
 -   title: Dev-Related Links
     type: "header"

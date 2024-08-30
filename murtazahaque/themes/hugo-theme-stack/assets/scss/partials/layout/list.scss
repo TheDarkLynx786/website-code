@@ -115,4 +115,51 @@
             }
         }
     }
+
+    .article-list--tile--projects {
+        display: flex;
+        padding-bottom: 15px;
+
+        article {
+            width: 500px;
+            height: 300px;
+            margin-right: 20px;
+            flex-shrink: 0;
+
+            .article-title {
+                margin: 0;
+                font-size: 24px;
+                
+                background-color: #4242425e;
+                max-width: fit-content;
+                padding: 5px;
+                border-radius: 10px;
+            }
+
+            .article-time {
+                color: white;
+                font-size: 15px;
+
+                background-color: #424242b8;
+                padding: 5px;
+                border-radius: 10px;
+                
+                position: absolute;
+                top: 20px;
+            }
+
+            .article-subheading {
+                margin: 0px;
+
+                max-width: fit-content;
+                background-color: #4242425e;
+                padding: 5px;
+                border-radius: 10px;
+            }
+
+            .article-details {
+                padding: 20px;
+            }
+        }
+    }
 }
