@@ -117,7 +117,10 @@
     }
 
     .article-list--tile--projects {
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(150px, 1fr));
+        grid-gap: 10px;
+        justify-items: center;
         padding-bottom: 15px;
 
         article {

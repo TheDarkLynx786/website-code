@@ -6,7 +6,6 @@ module:
 params:
     mainSections:
         - post
-        - programming-projects
     featuredImageField: image
     rssFullContent: true
     favicon: 
