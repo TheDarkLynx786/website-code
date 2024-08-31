@@ -15,12 +15,12 @@
 
         <div> 
             <p class="form-subtitle">Name:</p> 
-            <input type="text" name="name" placeholder="Your Name" required>
+            <input class="contact-input" type="text" name="name" placeholder="Your Name" required>
         </div>
         
         <div>
             <p class="form-subtitle">Email:</p> 
-            <input type="text" name="email" id="email" placeholder="Your Email" required>
+            <input class="contact-input" type="text" name="email" id="email" placeholder="Your Email" required>
         </div>
         
         <!--Fun Questions--> 
@@ -31,18 +31,18 @@
                 num1 = Math.floor(Math.random() * 1000),num2 = Math.floor(Math.random()*1000);
                 label.innerHTML = "Bot Check: What's " + num1 + " + " + num2 + "?";
             </script>
-            <input type="text" id="addition" name="addition" placeholder="Math time!">
+            <input class="contact-input" type="text" id="addition" name="addition" placeholder="Math time!">
         </div>
         
         <div>
             <p class="form-subtitle">Have any favorite music? Drop the name and artist and I'll give it a listen:</p> 
-            <input type="text" name="music" placeholder="(Optional) Your Favorite Music [Name - Artist-Name]">
+            <input class="contact-input" type="text" name="music" placeholder="(Optional) Your Favorite Music [Name - Artist-Name]">
         </div>
         
         <!--Text Area-->
         <div>
             <p class="form-subtitle">Your Message:</p>
-            <textarea resize="none" name="message" rows="4" placeholder="Have something to say? Shoot!" required></textarea>
+            <textarea class="contact-textarea" resize="none" name="message" rows="4" placeholder="Have something to say? Shoot!" required></textarea>
         </div>
 
         <div>
@@ -51,7 +51,7 @@
         </div>
 
         <!--Button-->
-        <button type='submit'>Send</button>
+        <button class="submit-button" type='submit'>Send</button>
 
         <!--Loader + Confirmation Message-->
         <div class="loader">
