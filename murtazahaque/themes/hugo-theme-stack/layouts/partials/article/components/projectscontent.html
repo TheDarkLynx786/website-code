@@ -1,0 +1,43 @@
+<section class="article-content">
+    <!-- Refer to https://discourse.gohugo.io/t/responsive-tables-in-markdown/10639/5 -->
+    {{ $wrappedTable := printf "<div class=\"table-wrapper\">${1}</div>" }}
+    {{ .Content | replaceRE "(<table>(?:.|\n)+?</table>)" $wrappedTable | safeHTML }}
+</section>
+
+
+
+<div class="article-list--profile">
+
+    {{ range $i, $track := .Params.tracks }}
+        
+        <article>
+
+            <div>
+                {{ with $track.image }}
+                    <div class="article-image">
+                        <img src="{{ . }}" loading="lazy">
+                    </div>
+                {{ end }}
+                <div class="article-details">
+                    <h2 class="article-title">
+                        {{- $track.title -}}
+                    </h2>
+                    <div>
+                    </div>
+                    <footer class="article-time">
+                        {{ with $track.description }}
+                            {{ . }}
+                        {{ else }}
+                            {{ $track.website }}
+                        {{ end }}
+                    </footer>
+                    
+                    
+                </div>
+            </div>
+
+        </article>
+
+    {{ end }}
+
+</div>
