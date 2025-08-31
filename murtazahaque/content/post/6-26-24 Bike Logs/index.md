@@ -6,6 +6,10 @@ description: A nice evening lakeside ride.
 draft: false
 categories: 
     - bike logs
+tags:
+    - biking
+    - outdoors
+    - landscape
 ---
 
 # Evening Lakeside Ride - 6/26/2024 
